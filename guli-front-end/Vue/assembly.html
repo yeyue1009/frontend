@@ -10,25 +10,21 @@
 
 <body>
     <div id="app">
-        <button v-on:click="search">查询</button>
-
-        <button @click="search">不查询</button>
-
+        <Navbar></Navbar>
     </div>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script> 
-        new Vue({
+    <script>
+          new Vue({
             el: '#app',
-            data: {
-                searchMap:{
-                    keyword:'gttx'
+            //定义vue使用的组件
+            components: {
+                //组件的名字
+                'Navbar': {
+                    //组件的内容
+                    template: '<ul><li>首页</li><li>学员管理</li></ul>'
                 },
-
-                result:{}
-            },
-            methods:{
-                search(){
-                    console.log('search....')
+                'code':{
+                    template:"<p>fddnkd</p>"
                 }
             }
         })

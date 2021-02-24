@@ -10,26 +10,17 @@
 
 <body>
     <div id="app">
-        <button v-on:click="search">查询</button>
-
-        <button @click="search">不查询</button>
-
+        <input type="checkbox" v-model="ok"/>是否同意
+        <!--条件指令 v-if  v-else -->
+        <h1 v-if="ok">尚硅谷</h1>
+        <h1 v-else>谷粒学院</h1>
     </div>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script> 
+    <script>
         new Vue({
             el: '#app',
             data: {
-                searchMap:{
-                    keyword:'gttx'
-                },
-
-                result:{}
-            },
-            methods:{
-                search(){
-                    console.log('search....')
-                }
+                ok:false
             }
         })
     </script>

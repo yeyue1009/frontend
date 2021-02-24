@@ -10,26 +10,24 @@
 
 <body>
     <div id="app">
-        <button v-on:click="search">查询</button>
-
-        <button @click="search">不查询</button>
-
+           hello
+           
     </div>
     <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script> 
+    <script>
         new Vue({
             el: '#app',
             data: {
-                searchMap:{
-                    keyword:'gttx'
-                },
-
-                result:{}
             },
-            methods:{
-                search(){
-                    console.log('search....')
-                }
+            created() {
+                debugger
+                //在页面渲染之前执行
+                console.log('created..  ..')
+            },
+            mounted() {
+                debugger
+                //在页面渲染之后执行
+                console.log('mounted....')
             }
         })
     </script>
