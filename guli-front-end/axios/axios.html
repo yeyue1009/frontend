@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div v-for="user in userList">
+            {{user.name}} -- {{user.age}}
+        </div>
+
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                userList:[]
+            },
+            created(){
+                this.getUserList()
+            },
+            methods:{
+                getUserList() {
+                    //使用axios发送ajax请求
+                    //axios.提交方式("请求接口路径").then(箭头函数).catch(箭头函数)
+                    axios.get("data.json")
+                        .then(response =>{//请求成功执行then方法
+                            //response就是请求之后返回数据
+                            //console.log(response)
+                            //通过response获取具体数据，赋值给定义空数组
+                            this.userList = response.data.data.items
+                            console.log(this.userList)
+                        }) 
+                        .catch(error =>{
+                        }) //请求失败执行catch方法
+                }
+            },
+
+        })
+    </script>
+</body>
+
+</html>
