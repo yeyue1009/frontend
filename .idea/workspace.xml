@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="491344d8-9217-4ce6-b954-7817afe58fc9" name="Default Changelist" comment="" />
+    <list default="true" id="491344d8-9217-4ce6-b954-7817afe58fc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/guli-front-end/vue-admin-1010/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/guli-front-end/vue-admin-1010/src/router/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +35,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614584904487</updated>
       <workItem from="1614584905818" duration="1000" />
+      <workItem from="1614649466119" duration="3000" />
     </task>
     <servers />
   </component>
